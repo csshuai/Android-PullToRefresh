@@ -116,18 +116,6 @@ public class PullToRefreshWebView extends PullToRefreshBase<WebView> {
 		return mRefreshableView.getScrollY() >= (exactContentHeight - mRefreshableView.getHeight());
 	}
 
-	@Override
-	protected void onPtrRestoreInstanceState(Bundle savedInstanceState) {
-		super.onPtrRestoreInstanceState(savedInstanceState);
-		mRefreshableView.restoreState(savedInstanceState);
-	}
-
-	@Override
-	protected void onPtrSaveInstanceState(Bundle saveState) {
-		super.onPtrSaveInstanceState(saveState);
-		mRefreshableView.saveState(saveState);
-	}
-
 	@TargetApi(9)
 	final class InternalWebViewSDK9 extends WebView {
 
